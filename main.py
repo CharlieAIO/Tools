@@ -7,7 +7,6 @@ import random
 import time
 import requests
 
-requests.packages.urllib3.disable_warnings()
 
 def split_list(alist, wanted_parts=1):
     length = len(alist)
@@ -18,7 +17,6 @@ def split_list(alist, wanted_parts=1):
 TOKEN = "here"
 BOT_PREFIX = "!"
 
-keywords = ["restock","live","at","get","ready","monday","tuesday","wednesday","thursday","friday","saturday","sunday","soon","password","?"] #SET YOUR KEY WORDS HERE
 
 client = Bot(command_prefix=BOT_PREFIX)
 discor = discord.Client()
@@ -30,20 +28,12 @@ async def on_member_join(member):
     role = discord.utils.get(member.server.roles, name='pending')
     await client.add_roles(member, role)
 
-@client.event
-async def on_message(message):
-    for keyword in keywords:
-        if keyword.lower() in message.content.lower() and message.channel.name == "bot-twitter": # SET YOUR CHANNEL NAME HERE
-            await client.send_message (message.channel,"<@539531779564896276> - keyword matched")
-              break  
-    
     
 @client.event
 async def on_ready():
     print("Bot is Ready!")
     print("Link builder online")
-    print{"Matt is Ready")
-    print(" Keyword Pinger is good to go")
+    print("Matt is Ready")
     print("AUTO-ROLE is ready")
     print("name: {}".format(client.user.name))
     print("ID: {}".format(client.user.id))
