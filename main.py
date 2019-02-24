@@ -33,8 +33,9 @@ async def on_member_join(member):
 @client.event
 async def on_message(message):
     for keyword in keywords:
-        if keyword.lower() in message.content.lower() and message.channel.name == "bot-twitter": 
-            await client.send_message(message.channel,"<@539531779564896276> - keyword matched")     
+        if keyword.lower() in message.content.lower() and message.channel.name == "bot-twitter": # SET YOUR CHANNEL NAME HERE
+            await client.send_message (message.channel,"<@539531779564896276> - keyword matched")
+              break  
     
     
 @client.event
