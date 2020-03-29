@@ -185,31 +185,6 @@ async def shoe(ctx, region, size):
         emb.add_field(name="UK Size", value=str(pfinal), inline=False)
         await client.send_message(ctx.message.channel, embed=emb)
 
-@client.command(name="ping",
-                pass_context=True)
-async def ping(ctx):
-    ping = 'https://www.speedtest.net/run'
-    footer = 'https://pbs.twimg.com/profile_images/1086659064304676865/oX8NsFC-_400x400.jpg'
-    emb = discord.Embed(title='Pong', colour=0xf788e4)
-    emb.add_field(name="Online?", value=":white_check_mark:", inline=False)
-    emb.add_field(name="ping", value= ping, inline=False)
-    emb.set_footer(text="StirFry", icon_url=footer)
-    await client.send_message(ctx.message.channel, embed=emb)
-
-@client.command(name="matt69",
-                pass_context=True)
-async def ping(ctx):
-    footer = 'https://pbs.twimg.com/profile_images/1086659064304676865/oX8NsFC-_400x400.jpg'
-    emb = discord.Embed(title='Pong', colour=0xf788e4)
-    emb.add_field(name="Bus?", value=":white_check_mark:", inline=False)
-    emb.add_field(name="Kick About?", value=":white_check_mark:", inline=False)
-    emb.add_field(name="Subway?", value=":white_check_mark:", inline=False)
-    emb.add_field(name="Bath?", value=":white_check_mark:", inline=False)
-    emb.add_field(name="Facetime Dad?", value=":white_check_mark:", inline=False)
-    emb.add_field(name="PS4?", value=":white_check_mark:", inline=False)
-    emb.set_footer(text="StirFry", icon_url=footer)
-    await client.send_message(ctx.message.channel, embed=emb)
-
 @client.command(name="botdownload",
                 pass_context=True)
 async def bot(ctx):
